@@ -3,6 +3,6 @@ module "components" {
 
   for_each = var.vpc
   cidr     = each.value["cidr"]
-  subnet   = each.value["subnets"]
+  subnets   = each.value["subnets"]
 }
 

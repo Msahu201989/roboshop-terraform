@@ -1,1 +1,3 @@
 variable "vpc" {}
+variable "subnets" {}
+

@@ -27,3 +27,12 @@ tags                         = var.tags
 
 }
 
+
+
+module "docdb" {
+  source = "git::https://github.com/Msahu201989/tf-module-docdb.git"
+  tags                         = var.tags
+  env                          = var.env
+  for_each                     = var.docdb
+
+}

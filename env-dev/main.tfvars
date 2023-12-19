@@ -21,3 +21,13 @@ vpc = {
 default_vpc_id = "vpc-0aa9e93d9aea8a408"
 default_vpc_cidr = "172.31.0.0/16"
 default_vpc_route_table_id = "rtb-02f3f9a8e79a6c925"
+
+tags = {
+  company_name = "ABC TEch"
+  business_unit = "Ecommerce"
+  project_name = "roboshop"
+  cost_center  = "ecom_rs"
+  created_by   = "terraform"
+}
+
+env = "dev"

@@ -47,3 +47,17 @@ module "docdb" {
   instance_class          = each.value["instance_class"]
 
 }
+
+module "rds" {
+  source = "git::https://github.com/Msahu201989/tf-module-rds.git"
+  tags                         = var.tags
+  env                          = var.env
+
+  for_each                = var.rds
+
+  subnet_ids              = local.db_subnets
+  vpc_id                  = local.vpc_id
+  sg_ingress_cidr         = local.app_subnets_cidr
+
+
+}
